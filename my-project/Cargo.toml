@@ -1,12 +1,13 @@
 [package]
-name = "slint-rust-template"
+name = "my-project"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ["cdylib"]
 
 [dependencies]
-slint = "1.14.1"
+slint = { version = "1.14.1", features = ["backend-android-activity-06"] }
 
 [build-dependencies]
 slint-build = "1.14.1"
