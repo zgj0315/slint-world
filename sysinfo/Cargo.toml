@@ -7,6 +7,8 @@ edition = "2024"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
+jni = "0.21.1"
+ndk-context = "0.1.1"
 slint = {version = "1.14.1", features = ["backend-android-activity-06"]}
 
 [build-dependencies]

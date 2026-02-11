@@ -1,18 +1,21 @@
 import { Button, VerticalBox } from "std-widgets.slint";
 
 export component AppWindow inherits Window {
-    in-out property <int> counter: 42;
-    callback request-increase-value();
+    in property <string> sys_info: "Loading...";
+
     VerticalBox {
+        alignment: center;
         Text {
-            text: "Counter: \{root.counter}";
+            text: "Android System Info:";
+            font-size: 24px;
+            horizontal-alignment: center;
         }
 
-        Button {
-            text: "Increase value";
-            clicked => {
-                root.request-increase-value();
-            }
+        Text {
+            text: root.sys_info;
+            font-size: 18px;
+            horizontal-alignment: center;
+            color: #a0a0a0;
         }
     }
 }
