@@ -1,0 +1,9 @@
+android:
+  manifest:
+    package: com.github.zgj0315.sysinfo
+    application:
+      label: SysInfo
+    uses_permission:
+      - name: android.permission.ACCESS_WIFI_STATE
+      - name: android.permission.ACCESS_NETWORK_STATE
+      - name: android.permission.ACCESS_FINE_LOCATION
