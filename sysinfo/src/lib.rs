@@ -52,6 +52,8 @@ fn get_android_system_info() -> String {
     // 4. 读取具体信息
     let manufacturer = get_field("MANUFACTURER"); // 厂商
     let model = get_field("MODEL"); // 型号
+    let device = get_field("DEVICE"); // 设备代号
+    let board = get_field("BOARD"); // 主板/芯片组代号
 
     // 读取 android.os.Build.VERSION.RELEASE (嵌套静态类)
     let version_release = env
@@ -65,8 +67,8 @@ fn get_android_system_info() -> String {
         .unwrap_or_else(|_| "Unknown".to_string());
 
     format!(
-        "Manufacturer: {}\nModel: {}\nAndroid Version: {}",
-        manufacturer, model, version_release
+        "Manufacturer: {}\nModel: {}\nAndroid Version: {}\nDevice: {}\nBoard: {}",
+        manufacturer, model, version_release, device, board
     )
 }
 
