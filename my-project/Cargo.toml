@@ -1,13 +1,18 @@
 [package]
+edition = "2021"
 name = "my-project"
 version = "0.1.0"
-edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-slint = { version = "1.14.1", features = ["backend-android-activity-06"] }
+slint = {version = "1.14.1", features = ["backend-android-activity-06"]}
 
 [build-dependencies]
 slint-build = "1.14.1"
+
+[package.metadata.packager]
+before-packaging-command = "cargo build --release"
+identifier = "com.github.zgj0315.my-project"
+product-name = "MyProject"
